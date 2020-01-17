@@ -1,6 +1,6 @@
 {
   "name": "@cryptoeconomicslab/level-kvs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -22,6 +22,8 @@
   },
   "license": "Apache-2.0",
   "devDependencies": {
+    "@cryptoeconomicslab/db": "0.0.3",
+    "@cryptoeconomicslab/primitives": "0.0.3",
     "@types/jest": "^24.9.0",
     "@types/levelup": "^4.3.0",
     "@types/memdown": "^3.0.0",
@@ -56,9 +58,11 @@
     }
   },
   "dependencies": {
-    "@cryptoeconomicslab/db": "0.0.3",
-    "@cryptoeconomicslab/primitives": "0.0.3",
     "levelup": "^4.3.2",
     "memdown": "^5.1.0"
+  },
+  "peerDependencies": {
+    "@cryptoeconomicslab/db": "0.0.3",
+    "@cryptoeconomicslab/primitives": "0.0.3"
   }
 }
