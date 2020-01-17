@@ -1,0 +1,63 @@
+{
+  "name": "@cryptoeconomicslab/level-kvs",
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "build:check": "tsc --noEmit",
+    "test": "jest",
+    "lint": "eslint --ext ts,tsx src",
+    "doc": "typedoc --out docs src",
+    "clean": "rm -rf lib docs"
+  },
+  "author": {
+    "name": "Cryptoeconomics Lab",
+    "url": "https://www.cryptoeconomicslab.com/"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/jest": "^24.9.0",
+    "@types/levelup": "^4.3.0",
+    "@types/memdown": "^3.0.0",
+    "@types/node": "^13.1.7",
+    "@typescript-eslint/eslint-plugin": "^2.16.0",
+    "@typescript-eslint/parser": "^2.16.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
+    "ts-jest": "^24.3.0",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testMatch": [
+      "**/__tests__/**/?(*.)+(spec|test).(ts|js)",
+      "**/?(*.)+(spec|test).ts"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "ts"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    }
+  },
+  "dependencies": {
+    "@cryptoeconomicslab/db": "0.0.1",
+    "@cryptoeconomicslab/primitives": "0.0.1",
+    "levelup": "^4.3.2",
+    "memdown": "^5.1.0"
+  }
+}
