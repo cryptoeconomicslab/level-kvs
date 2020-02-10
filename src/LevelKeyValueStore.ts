@@ -3,7 +3,7 @@ import { Bytes } from '@cryptoeconomicslab/primitives'
 import levelup, { LevelUp } from 'levelup'
 import { AbstractLevelDOWN, AbstractIterator } from 'abstract-leveldown'
 import memdown from 'memdown'
-import util from 'util'
+import { promisify } from 'es6-promisify'
 
 export class LevelKeyValueStoreIterator implements Iterator {
   public iter: AbstractIterator<Buffer, Buffer>
@@ -64,8 +64,8 @@ export class LevelKeyValueStore implements KeyValueStore {
       this.dbName = prefix.suffix('.')
       this.db = levelup(leveldown)
     }
-    this._put = util.promisify(this.db.put.bind(this.db))
-    this._del = util.promisify(this.db.del.bind(this.db))
+    this._put = promisify(this.db.put.bind(this.db))
+    this._del = promisify(this.db.del.bind(this.db))
   }
 
   public async get(key: Bytes): Promise<Bytes | null> {
