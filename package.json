@@ -23,7 +23,8 @@
   "license": "Apache-2.0",
   "dependencies": {
     "levelup": "^4.3.2",
-    "memdown": "^5.1.0"
+    "memdown": "^5.1.0",
+    "util": "^0.12.1"
   },
   "devDependencies": {
     "@cryptoeconomicslab/db": "0.0.6",
