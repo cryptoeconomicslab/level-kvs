@@ -23,12 +23,13 @@
   "license": "Apache-2.0",
   "dependencies": {
     "es6-promisify": "^6.0.2",
+    "jsbi": "^3.1.1",
     "levelup": "^4.3.2",
     "memdown": "^5.1.0"
   },
   "devDependencies": {
-    "@cryptoeconomicslab/db": "0.0.6",
-    "@cryptoeconomicslab/primitives": "0.0.6",
+    "@cryptoeconomicslab/db": "^0.0.15",
+    "@cryptoeconomicslab/primitives": "^0.0.15",
     "@types/es6-promisify": "^6.0.0",
     "@types/jest": "^24.9.0",
     "@types/levelup": "^4.3.0",
@@ -46,8 +47,8 @@
     "typescript": "^3.7.5"
   },
   "peerDependencies": {
-    "@cryptoeconomicslab/db": "^0.0.5",
-    "@cryptoeconomicslab/primitives": "^0.0.5"
+    "@cryptoeconomicslab/db": "^0.0.15",
+    "@cryptoeconomicslab/primitives": "^0.0.15"
   },
   "jest": {
     "transform": {
